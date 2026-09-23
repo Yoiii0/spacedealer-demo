@@ -50,7 +50,7 @@
     .booth-available:hover { transform: scale(1.05); filter: brightness(1.1); }
     .booth-booked { background-color: #ef4444; cursor: not-allowed; opacity: 0.8; }
     .booth-pending { background-color: #f59e0b; cursor: not-allowed; opacity: 0.9; }
-    .booth-selected { background-color: #f59e0b !important; ring: 4px solid #fde68a; }
+    .booth-selected { background-color: #f59e0b !important; box-shadow: 0 0 0 4px #fde68a; }
     
     .custom-scrollbar::-webkit-scrollbar {
       height: 6px;
@@ -148,8 +148,8 @@
 
           <div class="pt-6 sm:pt-8 border-t border-slate-800 grid grid-cols-3 gap-2 sm:gap-4 text-center lg:text-left">
             <div>
-              <p class="text-xl sm:text-3xl font-bold text-white">40+ บูธ</p>
-              <p class="text-[10px] sm:text-xs text-slate-400 mt-1">ขยายพื้นที่เปิดจองพิเศษ</p>
+              <p class="text-xl sm:text-3xl font-bold text-white">30 บูธ</p>
+              <p class="text-[10px] sm:text-xs text-slate-400 mt-1">พื้นที่ในผังปัจจุบัน</p>
             </div>
             <div>
               <p class="text-xl sm:text-3xl font-bold text-white">100%</p>
@@ -157,7 +157,7 @@
             </div>
             <div>
               <p class="text-xl sm:text-3xl font-bold text-white">24/7</p>
-              <p class="text-[10px] sm:text-xs text-slate-400 mt-1">ระบบจองอัตโนมัติ</p>
+              <p class="text-[10px] sm:text-xs text-slate-400 mt-1">ระบบต้นแบบพร้อมสาธิต</p>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@
                 </div>
                 <p class="text-xs text-slate-400"><i class="fa-solid fa-location-dot mr-1 text-red-400"></i> ลานกิจกรรมกลาง มทร.ธัญบุรี</p>
                 <div class="mt-3 pt-3 border-t border-slate-800 flex justify-between items-center text-xs">
-                  <span class="text-slate-300">ราคาบูธเริ่มต้น ฿1,500</span>
+                  <span class="text-slate-300">ราคาบูธเริ่มต้น ฿500</span>
                   <a href="#floorplan" class="text-brand-400 hover:text-brand-300 font-semibold flex items-center gap-1">คลิกเลือกจองบูธ <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
@@ -195,8 +195,8 @@
                   <i class="fa-solid fa-envelope-open-text"></i>
                 </div>
                 <div>
-                  <h4 class="text-xs sm:text-sm font-semibold text-white">ระบบส่งข้อมูลการชำระเงินเข้าอีเมล</h4>
-                  <p class="text-[11px] sm:text-xs text-slate-400">ได้รับรายละเอียดเลขบัญชีทันทีหลังกดจอง</p>
+                  <h4 class="text-xs sm:text-sm font-semibold text-white">จำลองการส่งข้อมูลการชำระเงินเข้าอีเมล</h4>
+                  <p class="text-[11px] sm:text-xs text-slate-400">แสดงผลการจองเพื่อสาธิตขั้นตอนการทำงาน</p>
                 </div>
               </div>
             </div>
@@ -237,7 +237,7 @@
             <i class="fa-solid fa-envelope-circle-check"></i>
           </div>
           <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">3. เช็กอีเมล & ชำระเงิน</h3>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">รับขั้นตอนชำระเงินและเลขบัญชีทางอีเมล ชำระเงินเสร็จสิ้นเพื่อรับ E-Pass สแกนตั้งร้านได้ทันที</p>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">แสดงผลขั้นตอนการชำระเงินแบบจำลอง เพื่อสาธิตการทำงานของเว็บไซต์</p>
         </div>
       </div>
     </div>
@@ -291,231 +291,205 @@
             </div>
           </div>
 
-          <!-- Extended Floorplan Area -->
-          <div id="floorplanScrollContainer" class="overflow-x-auto custom-scrollbar scroll-smooth pb-4">
-            <div class="min-w-[750px] sm:min-w-[980px] space-y-6">
-              
-              <!-- Stage / Main Entrance Header -->
-              <div class="w-full py-3 bg-gradient-to-r from-brand-600 via-indigo-600 to-brand-600 text-center font-bold text-xs sm:text-sm tracking-wider uppercase rounded-xl shadow-lg flex items-center justify-center gap-2">
-                <i class="fa-solid fa-music text-amber-400"></i> เวทีแสดงคอนเสิร์ต & ทางเข้าหลักงาน RMUTT FEST 2027
-              </div>
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 rounded-xl text-center shadow-lg border border-blue-400/30">
+                <h1 class="text-lg md:text-xl font-bold flex items-center justify-center gap-2 text-white">
+                    🎵 เวทีแสดงคอนเสิร์ต & ทางเข้าหลักงาน RMUTT FEST 2027 
+                </h1>
+                <p class="text-xs text-blue-100 mt-1">📍 บริเวณลานอนันต์รังสรรค์ / หน้าหอประชุมใหญ่ มทร.ธัญบุรี</p>
+            </div>
 
-              <!-- ZONE A: VIP / Front Stage (8 Booths) -->
-              <div>
-                <div class="mb-2 text-xs font-bold text-amber-400 flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> ZONE A: หน้าเวที VIP (ทำเลคนแน่นที่สุด)
-                </div>
-                <div class="grid grid-cols-8 gap-1.5 sm:gap-2.5">
-                  <div id="booth-A1" onclick="selectBooth('A1', 2500, 'Zone A (หน้าเวที)', '2x2 ม.', 'ปลั๊กไฟ 5A, โต๊ะ 1, เก้าอี้ 2')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">A1</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,500</span>
-                  </div>
-                  <div class="booth-booked p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">A2</span>
-                    <span class="text-[9px] sm:text-[10px] text-slate-200">จองแล้ว</span>
-                  </div>
-                  <div id="booth-A3" onclick="selectBooth('A3', 2500, 'Zone A (หน้าเวที)', '2x2 ม.', 'ปลั๊กไฟ 5A, โต๊ะ 1, เก้าอี้ 2')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">A3</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,500</span>
-                  </div>
-                  <div id="booth-A4" onclick="selectBooth('A4', 2500, 'Zone A (หน้าเวที)', '2x2 ม.', 'ปลั๊กไฟ 5A, โต๊ะ 1, เก้าอี้ 2')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">A4</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,500</span>
-                  </div>
-                  <div class="booth-booked p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">A5</span>
-                    <span class="text-[9px] sm:text-[10px] text-slate-200">จองแล้ว</span>
-                  </div>
-                  <div id="booth-A6" onclick="selectBooth('A6', 2500, 'Zone A (หน้าเวที)', '2x2 ม.', 'ปลั๊กไฟ 5A, โต๊ะ 1, เก้าอี้ 2')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">A6</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,500</span>
-                  </div>
-                  <div id="booth-A7" onclick="selectBooth('A7', 2500, 'Zone A (หน้าเวที)', '2x2 ม.', 'ปลั๊กไฟ 5A, โต๊ะ 1, เก้าอี้ 2')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">A7</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,500</span>
-                  </div>
-                  <div id="booth-A8" onclick="selectBooth('A8', 2500, 'Zone A (มุมหัวมุม)', '2x2 ม.', 'ปลั๊กไฟ 5A, โต๊ะ 1, เก้าอี้ 2')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">A8</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,500</span>
-                  </div>
-                </div>
-              </div>
+            <!-- Zone Layout Grid (ผังใหม่แบบ Interactive) -->
+            <div class="space-y-6 overflow-x-auto custom-scrollbar pb-2" id="floorplanScrollContainer"><div class="min-w-[900px] space-y-6" id="map-section">
 
-              <!-- Walkway 1 -->
-              <div class="w-full py-1.5 bg-slate-700/50 text-center text-[10px] sm:text-[11px] text-slate-400 rounded-lg border border-dashed border-slate-600">
-                <i class="fa-solid fa-shoe-prints mr-1"></i> ทางเดินหลัก Walkway 1 (เชื่อมทางเข้าหลักและโซนอาหาร)
-              </div>
+                <!-- ZONE A -->
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <h2 class="text-amber-400 font-bold flex items-center gap-2 text-sm md:text-base">
+                            <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                            ZONE A: บูธกิจกรรมแบรนด์ & ร้านดังติดกระแส (หน้าเวทีใหญ่)
+                        </h2>
+                        <span class="text-xs bg-amber-400/10 text-amber-300 border border-amber-400/30 px-2 py-0.5 rounded">ทำเลคนแน่นที่สุด</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                        <button onclick="selectBooth('A1', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A1" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">A1</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿2,000</span>
+                        </button>
+                        <button disabled id="booth-A2" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                            <span class="font-bold text-lg text-white">A2</span>
+                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
+                        </button>
+                        <button onclick="selectBooth('A3', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A3" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">A3</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿2,000</span>
+                        </button>
+                        <button onclick="selectBooth('A4', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A4" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">A4</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿2,000</span>
+                        </button>
+                        <button disabled id="booth-A5" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                            <span class="font-bold text-lg text-white">A5</span>
+                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
+                        </button>
+                        <button onclick="selectBooth('A6', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A6" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">A6</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿2,000</span>
+                        </button>
+                    </div>
+                </div>
 
-              <!-- ZONE B: Fashion & Lifestyle (8 Booths) -->
-              <div>
-                <div class="mb-2 text-xs font-bold text-brand-400 flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-brand-400"></span> ZONE B: สินค้าแฟชั่น & ไลฟ์สไตล์
+                <!-- Walkway 1 -->
+                <div class="border-y border-dashed border-slate-600 py-2 text-center text-xs text-slate-400 bg-slate-800/30 rounded-lg flex items-center justify-center gap-2">
+                    <span>🐾 ทางเดินหลัก Walkway 1 (ฝั่งเชื่อมอาคารสำนักงานอธิการบดี & โซนอาหาร)</span>
                 </div>
-                <div class="grid grid-cols-8 gap-1.5 sm:gap-2.5">
-                  <div id="booth-B1" onclick="selectBooth('B1', 1800, 'Zone B (แฟชั่น)', '2x2 ม.', 'ปลั๊กไฟ 5A, เก้าอี้ 1')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">B1</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,800</span>
-                  </div>
-                  <div id="booth-B2" onclick="selectBooth('B2', 1800, 'Zone B (แฟชั่น)', '2x2 ม.', 'ปลั๊กไฟ 5A, เก้าอี้ 1')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">B2</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,800</span>
-                  </div>
-                  <div class="booth-booked p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">B3</span>
-                    <span class="text-[9px] sm:text-[10px] text-slate-200">จองแล้ว</span>
-                  </div>
-                  <div id="booth-B4" onclick="selectBooth('B4', 1800, 'Zone B (แฟชั่น)', '2x2 ม.', 'ปลั๊กไฟ 5A, เก้าอี้ 1')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">B4</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,800</span>
-                  </div>
-                  <div id="booth-B5" onclick="selectBooth('B5', 1800, 'Zone B (แฟชั่น)', '2x2 ม.', 'ปลั๊กไฟ 5A, เก้าอี้ 1')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">B5</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,800</span>
-                  </div>
-                  <div class="booth-booked p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">B6</span>
-                    <span class="text-[9px] sm:text-[10px] text-slate-200">จองแล้ว</span>
-                  </div>
-                  <div id="booth-B7" onclick="selectBooth('B7', 1800, 'Zone B (แฟชั่น)', '2x2 ม.', 'ปลั๊กไฟ 5A, เก้าอี้ 1')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">B7</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,800</span>
-                  </div>
-                  <div id="booth-B8" onclick="selectBooth('B8', 1800, 'Zone B (แฟชั่น)', '2x2 ม.', 'ปลั๊กไฟ 5A, เก้าอี้ 1')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">B8</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,800</span>
-                  </div>
-                </div>
-              </div>
 
-              <!-- ZONE C: Food & Beverages (8 Booths) -->
-              <div>
-                <div class="mb-2 text-xs font-bold text-emerald-400 flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span> ZONE C: โซนอาหาร & เครื่องดื่ม (Food & Beverage)
+                <!-- ZONE B -->
+                <div>
+                    <h2 class="text-emerald-400 font-bold mb-3 flex items-center gap-2 text-sm md:text-base">
+                        <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+                        ZONE B: แฟชั่น เสื้อผ้ามือสอง & วินเทจสไตล์
+                    </h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                        <button onclick="selectBooth('B1', 1200, 'Zone B (แฟชั่น/วินเทจ)')" id="booth-B1" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">B1</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿1,200</span>
+                        </button>
+                        <button onclick="selectBooth('B2', 1200, 'Zone B (แฟชั่น/วินเทจ)')" id="booth-B2" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">B2</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿1,200</span>
+                        </button>
+                        <button disabled id="booth-B3" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                            <span class="font-bold text-lg text-white">B3</span>
+                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
+                        </button>
+                        <button onclick="selectBooth('B4', 1200, 'Zone B (แฟชั่น/วินเทจ)')" id="booth-B4" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">B4</span>
+                            <span class="text-xs text-amber-950 font-semibold mt-1">฿1,200</span>
+                        </button>
+                        <button onclick="selectBooth('B5', 1200, 'Zone B (แฟชั่น/วินเทจ)')" id="booth-B5" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">B5</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿1,200</span>
+                        </button>
+                        <button disabled id="booth-B6" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                            <span class="font-bold text-lg text-white">B6</span>
+                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="grid grid-cols-8 gap-1.5 sm:gap-2.5">
-                  <div id="booth-C1" onclick="selectBooth('C1', 2000, 'Zone C (อาหาร)', '2x2 ม.', 'ปลั๊กไฟ 15A, ซิงค์น้ำ')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">C1</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,000</span>
-                  </div>
-                  <div id="booth-C2" onclick="selectBooth('C2', 2000, 'Zone C (อาหาร)', '2x2 ม.', 'ปลั๊กไฟ 15A, ซิงค์น้ำ')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">C2</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,000</span>
-                  </div>
-                  <div id="booth-C3" onclick="selectBooth('C3', 2000, 'Zone C (อาหาร)', '2x2 ม.', 'ปลั๊กไฟ 15A, ซิงค์น้ำ')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">C3</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,000</span>
-                  </div>
-                  <div class="booth-booked p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">C4</span>
-                    <span class="text-[9px] sm:text-[10px] text-slate-200">จองแล้ว</span>
-                  </div>
-                  <div id="booth-C5" onclick="selectBooth('C5', 2000, 'Zone C (อาหาร)', '2x2 ม.', 'ปลั๊กไฟ 15A, ซิงค์น้ำ')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">C5</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,000</span>
-                  </div>
-                  <div id="booth-C6" onclick="selectBooth('C6', 2000, 'Zone C (อาหาร)', '2x2 ม.', 'ปลั๊กไฟ 15A, ซิงค์น้ำ')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">C6</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,000</span>
-                  </div>
-                  <div id="booth-C7" onclick="selectBooth('C7', 2000, 'Zone C (อาหาร)', '2x2 ม.', 'ปลั๊กไฟ 15A, ซิงค์น้ำ')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">C7</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,000</span>
-                  </div>
-                  <div id="booth-C8" onclick="selectBooth('C8', 2000, 'Zone C (อาหาร)', '2x2 ม.', 'ปลั๊กไฟ 15A, ซิงค์น้ำ')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">C8</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿2,000</span>
-                  </div>
-                </div>
-              </div>
 
-              <!-- Walkway 2 -->
-              <div class="w-full py-1.5 bg-slate-700/50 text-center text-[10px] sm:text-[11px] text-slate-400 rounded-lg border border-dashed border-slate-600">
-                <i class="fa-solid fa-shoe-prints mr-1"></i> ทางเดิน Walkway 2 (เชื่อมโซนสินค้าทั่วไปและสปอนเซอร์)
-              </div>
+                <!-- ZONE C -->
+                <div>
+                    <h2 class="text-cyan-400 font-bold mb-3 flex items-center gap-2 text-sm md:text-base">
+                        <span class="w-3 h-3 rounded-full bg-cyan-400 inline-block"></span>
+                        ZONE C: สตรีทฟู้ด เครื่องดื่ม & Food Truck (รวมจุดต่อปลั๊กไฟ)
+                    </h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                        <button onclick="selectBooth('C1', 1500, 'Zone C (สตรีทฟู้ด)')" id="booth-C1" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">C1</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿1,500</span>
+                        </button>
+                        <button onclick="selectBooth('C2', 1500, 'Zone C (สตรีทฟู้ด)')" id="booth-C2" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">C2</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿1,500</span>
+                        </button>
+                        <button onclick="selectBooth('C3', 1500, 'Zone C (สตรีทฟู้ด)')" id="booth-C3" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">C3</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿1,500</span>
+                        </button>
+                        <button disabled id="booth-C4" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                            <span class="font-bold text-lg text-white">C4</span>
+                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
+                        </button>
+                        <button onclick="selectBooth('C5', 1500, 'Zone C (สตรีทฟู้ด)')" id="booth-C5" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">C5</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿1,500</span>
+                        </button>
+                        <button onclick="selectBooth('C6', 1500, 'Zone C (สตรีทฟู้ด)')" id="booth-C6" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">C6</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿1,500</span>
+                        </button>
+                    </div>
+                </div>
 
-              <!-- ZONE D: General & Crafts -->
-              <div>
-                <div class="mb-2 text-xs font-bold text-purple-400 flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span> ZONE D: โซนสินค้าทั่วไป & งานแฮนด์เมด
+                <!-- Walkway 2 -->
+                <div class="border-y border-dashed border-slate-600 py-2 text-center text-xs text-slate-400 bg-slate-800/30 rounded-lg flex items-center justify-center gap-2">
+                    <span>🐾 ทางเดิน Walkway 2 (เชื่อมฝั่งโรงอาหารกลาง / จุดจอดรถ EV Tram)</span>
                 </div>
-                <div class="grid grid-cols-8 gap-1.5 sm:gap-2.5">
-                  <div id="booth-D1" onclick="selectBooth('D1', 1500, 'Zone D (สินค้าทั่วไป)', '2x2 ม.', 'ปลั๊กไฟ 5A')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">D1</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,500</span>
-                  </div>
-                  <div id="booth-D2" onclick="selectBooth('D2', 1500, 'Zone D (สินค้าทั่วไป)', '2x2 ม.', 'ปลั๊กไฟ 5A')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">D2</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,500</span>
-                  </div>
-                  <div id="booth-D3" onclick="selectBooth('D3', 1500, 'Zone D (สินค้าทั่วไป)', '2x2 ม.', 'ปลั๊กไฟ 5A')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">D3</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,500</span>
-                  </div>
-                  <div id="booth-D4" onclick="selectBooth('D4', 1500, 'Zone D (สินค้าทั่วไป)', '2x2 ม.', 'ปลั๊กไฟ 5A')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">D4</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,500</span>
-                  </div>
-                  <div class="booth-booked p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">D5</span>
-                    <span class="text-[9px] sm:text-[10px] text-slate-200">จองแล้ว</span>
-                  </div>
-                  <div id="booth-D6" onclick="selectBooth('D6', 1500, 'Zone D (สินค้าทั่วไป)', '2x2 ม.', 'ปลั๊กไฟ 5A')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">D6</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,500</span>
-                  </div>
-                  <div id="booth-D7" onclick="selectBooth('D7', 1500, 'Zone D (สินค้าทั่วไป)', '2x2 ม.', 'ปลั๊กไฟ 5A')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">D7</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,500</span>
-                  </div>
-                  <div id="booth-D8" onclick="selectBooth('D8', 1500, 'Zone D (สินค้าทั่วไป)', '2x2 ม.', 'ปลั๊กไฟ 5A')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">D8</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿1,500</span>
-                  </div>
-                </div>
-              </div>
 
-              <!-- ZONE E: Activity & Sponsor -->
-              <div>
-                <div class="mb-2 text-xs font-bold text-pink-400 flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-pink-400"></span> ZONE E: โซนกิจกรรม & บูธสปอนเซอร์
+                <!-- ZONE D -->
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <h2 class="text-purple-400 font-bold flex items-center gap-2 text-sm md:text-base">
+                            <span class="w-3 h-3 rounded-full bg-purple-400 inline-block"></span>
+                            ZONE D: สินค้าแฮนด์เมด งานศิลป์ & ไอเดียสร้างสรรค์
+                        </h2>
+                        <span class="text-xs bg-purple-400/10 text-purple-300 border border-purple-400/30 px-2 py-0.5 rounded">ส่วนลดพิเศษสำหรับนักศึกษา RMUTT</span>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                        <button onclick="selectBooth('D1', 500, 'Zone D (แฮนด์เมด)')" id="booth-D1" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">D1</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿500</span>
+                        </button>
+                        <button onclick="selectBooth('D2', 500, 'Zone D (แฮนด์เมด)')" id="booth-D2" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">D2</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿500</span>
+                        </button>
+                        <button onclick="selectBooth('D3', 500, 'Zone D (แฮนด์เมด)')" id="booth-D3" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">D3</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿500</span>
+                        </button>
+                        <button onclick="selectBooth('D4', 500, 'Zone D (แฮนด์เมด)')" id="booth-D4" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">D4</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿500</span>
+                        </button>
+                        <button disabled id="booth-D5" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                            <span class="font-bold text-lg text-white">D5</span>
+                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
+                        </button>
+                        <button onclick="selectBooth('D6', 500, 'Zone D (แฮนด์เมด)')" id="booth-D6" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">D6</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿500</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="grid grid-cols-8 gap-1.5 sm:gap-2.5">
-                  <div id="booth-E1" onclick="selectBooth('E1', 3000, 'Zone E (สปอนเซอร์)', '3x3 ม.', 'ปลั๊กไฟ 15A, ชุดโต๊ะเก้าอี้')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">E1</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿3,000</span>
-                  </div>
-                  <div id="booth-E2" onclick="selectBooth('E2', 3000, 'Zone E (สปอนเซอร์)', '3x3 ม.', 'ปลั๊กไฟ 15A, ชุดโต๊ะเก้าอี้')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">E2</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿3,000</span>
-                  </div>
-                  <div class="booth-booked p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">E3</span>
-                    <span class="text-[9px] sm:text-[10px] text-slate-200">จองแล้ว</span>
-                  </div>
-                  <div id="booth-E4" onclick="selectBooth('E4', 3000, 'Zone E (สปอนเซอร์)', '3x3 ม.', 'ปลั๊กไฟ 15A, ชุดโต๊ะเก้าอี้')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">E4</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿3,000</span>
-                  </div>
-                  <div id="booth-E5" onclick="selectBooth('E5', 3000, 'Zone E (สปอนเซอร์)', '3x3 ม.', 'ปลั๊กไฟ 15A, ชุดโต๊ะเก้าอี้')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">E5</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿3,000</span>
-                  </div>
-                  <div id="booth-E6" onclick="selectBooth('E6', 3000, 'Zone E (สปอนเซอร์)', '3x3 ม.', 'ปลั๊กไฟ 15A, ชุดโต๊ะเก้าอี้')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">E6</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿3,000</span>
-                  </div>
-                  <div id="booth-E7" onclick="selectBooth('E7', 3000, 'Zone E (สปอนเซอร์)', '3x3 ม.', 'ปลั๊กไฟ 15A, ชุดโต๊ะเก้าอี้')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">E7</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿3,000</span>
-                  </div>
-                  <div id="booth-E8" onclick="selectBooth('E8', 3000, 'Zone E (สปอนเซอร์)', '3x3 ม.', 'ปลั๊กไฟ 15A, ชุดโต๊ะเก้าอี้')" class="booth-available p-2 sm:p-3 rounded-xl text-center shadow">
-                    <span class="text-xs font-bold block">E8</span>
-                    <span class="text-[9px] sm:text-[10px] font-semibold">฿3,000</span>
-                  </div>
+
+                <!-- ZONE E -->
+                <div>
+                    <h2 class="text-pink-400 font-bold mb-3 flex items-center gap-2 text-sm md:text-base">
+                        <span class="w-3 h-3 rounded-full bg-pink-400 inline-block"></span>
+                        ZONE E: โซนกิจกรรมนักศึกษา, บอร์ดเกม & Co-Working Rest Area
+                    </h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                        <button onclick="selectBooth('E1', 800, 'Zone E (กิจกรรมนักศึกษา)')" id="booth-E1" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">E1</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿800</span>
+                        </button>
+                        <button onclick="selectBooth('E2', 800, 'Zone E (กิจกรรมนักศึกษา)')" id="booth-E2" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">E2</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿800</span>
+                        </button>
+                        <button disabled id="booth-E3" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                            <span class="font-bold text-lg text-white">E3</span>
+                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
+                        </button>
+                        <button onclick="selectBooth('E4', 800, 'Zone E (กิจกรรมนักศึกษา)')" id="booth-E4" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">E4</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿800</span>
+                        </button>
+                        <button onclick="selectBooth('E5', 800, 'Zone E (กิจกรรมนักศึกษา)')" id="booth-E5" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">E5</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿800</span>
+                        </button>
+                        <button onclick="selectBooth('E6', 800, 'Zone E (กิจกรรมนักศึกษา)')" id="booth-E6" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                            <span class="font-bold text-lg">E6</span>
+                            <span class="text-xs text-emerald-100 mt-1">฿800</span>
+                        </button>
+                    </div>
                 </div>
-              </div>
 
             </div>
+
           </div>
 
           <!-- Navigation Shortcut Bar -->
@@ -664,7 +638,8 @@
           </div>
           <p class="text-xs text-slate-400 leading-relaxed">
             บริษัท สเปซดีลเลอร์ จำกัด<br>
-            ผู้ให้บริการแพลตฟอร์มตัวกลางจัดสรรพื้นที่ขายของและจองบูธตลาดออนไลน์
+            ผู้ให้บริการแพลตฟอร์มตัวกลางจัดสรรพื้นที่ขายของและจองบูธตลาดออนไลน์<br>
+            <span class="text-amber-400">เว็บไซต์นี้เป็นต้นแบบสำหรับการนำเสนอ</span>
           </p>
           <p class="text-xs text-slate-500">
             <i class="fa-solid fa-id-card mr-1"></i> เลขทะเบียนพาณิชย์: 0105566099881
@@ -779,7 +754,7 @@
 
         <div class="pt-2">
           <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-lg shadow-brand-500/30 transition-all flex items-center justify-center gap-2">
-            <i class="fa-solid fa-paper-plane"></i> ส่งขั้นตอนชำระเงินไปที่อีเมล
+            <i class="fa-solid fa-paper-plane"></i> จำลองการส่งขั้นตอนชำระเงิน
           </button>
         </div>
       </form>
@@ -832,15 +807,15 @@
 
     function scrollFloorplan(direction) {
       const container = document.getElementById('floorplanScrollContainer');
-      const scrollAmount = 300;
-      if (direction === 'left') {
-        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      } else {
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
+      if (!container) return;
+      const scrollAmount = 450;
+      container.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
     }
 
-    function selectBooth(id, price, zone, size, items) {
+    function selectBooth(id, price, zone, size = '3 × 3 เมตร', items = 'โต๊ะ 1 ตัว + เก้าอี้ 2 ตัว') {
       if (currentSelectedBooth) {
         const prevEl = document.getElementById(`booth-${currentSelectedBooth.id}`);
         if (prevEl && prevEl.classList.contains('booth-selected')) {
@@ -924,9 +899,9 @@
       const email = document.getElementById('custEmail').value;
 
       alert(
-        `📩 ระบบได้ทำการจองล็อกบูธ ${currentSelectedBooth.id} ชั่วคราวให้คุณ ${name} เรียบร้อยแล้ว!\n\n` +
-        `เราได้ส่ง "ขั้นตอนการชำระเงินและเลขบัญชี/QR Code" ไปยังอีเมล:\n👉 ${email}\n\n` +
-        `กรุณาชำระเงินและแนบสลิปผ่านลิงก์ในอีเมลภายใน 24 ชม. เพื่อยืนยันสิทธิ์ครับ`
+        `📩 ระบบต้นแบบได้จำลองการจองบูธ ${currentSelectedBooth.id} ให้คุณ ${name} เรียบร้อยแล้ว!\n\n` +
+        `อีเมลที่กรอก: ${email}\nเบอร์โทร: ${phone}\n\n` +
+        `หมายเหตุ: เว็บไซต์ตัวอย่างนี้ยังไม่ได้เชื่อมระบบส่งอีเมลหรือระบบชำระเงินจริง\nข้อมูลจะแสดงผลเพื่อสาธิตขั้นตอนการจองเท่านั้น`
       );
 
       closeCheckoutModal();
