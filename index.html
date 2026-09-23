@@ -52,6 +52,7 @@
     .booth-pending { background-color: #f59e0b; cursor: not-allowed; opacity: 0.9; }
     .booth-selected { background-color: #f59e0b !important; box-shadow: 0 0 0 4px #fde68a; }
     
+    .custom-scrollbar { overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; }
     .custom-scrollbar::-webkit-scrollbar {
       height: 6px;
     }
@@ -65,18 +66,24 @@
     }
   </style>
 </head>
-<body class="font-sans bg-slate-50 text-slate-800 flex flex-col min-h-screen relative pb-16 md:pb-0">
+<body class="font-sans bg-slate-50 text-slate-800 flex flex-col min-h-screen relative pb-20 md:pb-0">
+
+  <!-- Prototype Notice -->
+  <div class="bg-amber-100 border-b border-amber-200 text-amber-900 text-center px-4 py-2 text-xs sm:text-sm font-medium relative z-30">
+    <i class="fa-solid fa-circle-info mr-1"></i>
+    เว็บไซต์ต้นแบบ — ข้อมูลทั้งหมดเป็นข้อมูลจำลองสำหรับการนำเสนอ
+  </div>
 
   <!-- 1. NAVIGATION BAR -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 min-h-16 sm:h-20 py-2 sm:py-0 flex items-center justify-between">
       <!-- Logo -->
       <a href="#" class="flex items-center gap-3 group">
         <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30 group-hover:rotate-6 transition-transform">
           <i class="fa-solid fa-store"></i>
         </div>
         <div>
-          <span class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">SPACE<span class="text-brand-600">DEALER</span></span>
+          <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900">SPACE<span class="text-brand-600">DEALER</span></span>
           <span class="block text-[10px] text-slate-500 tracking-widest uppercase font-medium">Online Space Organizer</span>
         </div>
       </a>
@@ -254,7 +261,7 @@
         </div>
         
         <!-- Legend -->
-        <div class="flex flex-wrap items-center gap-4 sm:gap-6 bg-slate-800 px-4 py-3 rounded-xl border border-slate-700 text-xs">
+        <div class="flex flex-wrap items-center gap-3 sm:gap-6 bg-slate-800 px-3 sm:px-4 py-3 rounded-xl border border-slate-700 text-[11px] sm:text-xs">
           <div class="flex items-center gap-2">
             <span class="w-3.5 h-3.5 rounded bg-emerald-500 inline-block"></span>
             <span>ว่าง (Available)</span>
