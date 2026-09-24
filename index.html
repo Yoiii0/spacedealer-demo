@@ -347,44 +347,52 @@
             <!-- Zone Layout Grid (ผังใหม่แบบ Interactive) -->
             <div class="space-y-6 overflow-x-auto custom-scrollbar pb-2" id="floorplanScrollContainer"><div class="min-w-[900px] space-y-6" id="map-section">
 
-                <!-- ZONE A -->
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <h2 class="text-amber-400 font-bold flex items-center gap-2 text-sm md:text-base">
-                            <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
-                            ZONE A: บูธกิจกรรมแบรนด์ & ร้านดังติดกระแส (หน้าเวทีใหญ่)
-                        </h2>
-                        <span class="text-xs bg-amber-400/10 text-amber-300 border border-amber-400/30 px-2 py-0.5 rounded">ทำเลคนแน่นที่สุด</span>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-                        <button onclick="selectBooth('A1', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A1" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
-                            <span class="font-bold text-lg">A1</span>
-                            <span class="text-xs text-emerald-100 mt-1">฿2,000</span>
-                        </button>
-                        <button disabled id="booth-A2" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
-                            <span class="font-bold text-lg text-white">A2</span>
-                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
-                        </button>
-                        <button onclick="selectBooth('A3', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A3" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
-                            <span class="font-bold text-lg">A3</span>
-                            <span class="text-xs text-emerald-100 mt-1">฿2,000</span>
-                        </button>
-                        <button onclick="selectBooth('A4', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A4" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
-                            <span class="font-bold text-lg">A4</span>
-                            <span class="text-xs text-emerald-100 mt-1">฿2,000</span>
-                        </button>
-                        <button disabled id="booth-A5" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
-                            <span class="font-bold text-lg text-white">A5</span>
-                            <span class="text-xs text-red-100 mt-1 font-medium">จองแล้ว</span>
-                        </button>
-                        <button onclick="selectBooth('A6', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A6" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
-                            <span class="font-bold text-lg">A6</span>
-                            <span class="text-xs text-emerald-100 mt-1">฿2,000</span>
-                        </button>
-                    </div>
-                </div>
+         <!-- ซองหุ้มเพื่อให้เลื่อนซ้าย-ขวาบนมือถือได้ -->
+<div class="overflow-x-auto pb-4" id="map-section">
+    <div class="min-w-[650px] space-y-6">
 
+        <!-- ZONE A -->
+        <div>
+            <div class="flex items-center justify-between mb-3">
+                <h2 class="text-amber-400 font-bold flex items-center gap-2 text-sm md:text-base">
+                    <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                    ZONE A: บูธกิจกรรมแบรนด์ & ร้านดังติดกระแส (หน้าเวทีใหญ่)
+                </h2>
+                <span class="text-xs bg-amber-400/10 text-amber-300 border border-amber-400/30 px-2 py-0.5 rounded">ทำเลคนแน่นที่สุด</span>
+            </div>
+            
+            <div class="grid grid-cols-6 gap-2">
+                <button onclick="selectBooth('A1', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A1" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                    <span class="font-bold text-base">A1</span>
+                    <span class="text-[10px] text-emerald-100 mt-0.5">฿2,000</span>
+                </button>
+                <button disabled id="booth-A2" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                    <span class="font-bold text-base text-white">A2</span>
+                    <span class="text-[10px] text-red-100 mt-0.5 font-medium">จองแล้ว</span>
+                </button>
+                <button onclick="selectBooth('A3', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A3" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                    <span class="font-bold text-base">A3</span>
+                    <span class="text-[10px] text-emerald-100 mt-0.5">฿2,000</span>
+                </button>
+                <button onclick="selectBooth('A4', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A4" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                    <span class="font-bold text-base">A4</span>
+                    <span class="text-[10px] text-emerald-100 mt-0.5">฿2,000</span>
+                </button>
+                <button disabled id="booth-A5" class="bg-red-500/80 cursor-not-allowed p-3 rounded-xl text-center flex flex-col justify-center items-center opacity-80">
+                    <span class="font-bold text-base text-white">A5</span>
+                    <span class="text-[10px] text-red-100 mt-0.5 font-medium">จองแล้ว</span>
+                </button>
+                <button onclick="selectBooth('A6', 2000, 'Zone A (หน้าเวทีใหญ่)')" id="booth-A6" class="booth-btn bg-emerald-600 hover:bg-emerald-500 p-3 rounded-xl text-center transition flex flex-col justify-center items-center shadow">
+                    <span class="font-bold text-base">A6</span>
+                    <span class="text-[10px] text-emerald-100 mt-0.5">฿2,000</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ZONE B, C, D, E ทำแบบเดียวกันโดยใช้ grid-cols-6 -->
+
+    </div>
+</div>
                 <!-- Walkway 1 -->
                 <div class="border-y border-dashed border-slate-600 py-2 text-center text-xs text-slate-400 bg-slate-800/30 rounded-lg flex items-center justify-center gap-2">
                     <span>🐾 ทางเดินหลัก Walkway 1 (ฝั่งเชื่อมอาคารสำนักงานอธิการบดี & โซนอาหาร)</span>
